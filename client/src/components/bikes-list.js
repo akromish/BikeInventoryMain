@@ -38,7 +38,7 @@ export default class BikesList extends Component {
                 this.setState({bikes: response.data});
             })
             .catch(function (error){
-                console.log(error + " " + PORT);
+                console.log(error + " at bike-list " + PORT);
             })
     }
 

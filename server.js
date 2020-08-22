@@ -5,7 +5,7 @@ const bikeRoutes = require('./bike.js');
 const mongoose = require('mongoose');
 
 const app = express();
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT || 5000;
 
 //allow db to receive input data
 app.use(cors());
