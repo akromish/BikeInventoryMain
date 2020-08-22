@@ -51,7 +51,7 @@ export default class BikesList extends Component {
             <div>
                 <h3>Your Bikes:</h3>
                 <table className="table">
-                    <thead class="thead-dark">
+                    <thead className="thead-dark">
                         <tr>
                             <th>Name</th>
                             <th>Type</th>
