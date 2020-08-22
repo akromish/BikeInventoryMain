@@ -35,7 +35,9 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const mongoose = require('mongoose');
 const bikeRoutes = express.Router();
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT;
+// const PORT = process.env.PORT || 4000;
+
 
 let Bike = require('./models/bike.model');
 
