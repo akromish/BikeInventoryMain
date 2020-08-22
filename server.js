@@ -42,7 +42,7 @@ let Bike = require('./models/bike.model');
 app.use(cors());
 app.use(bodyParser.json());
 
-const uri = process.env.MONGODB_URI || 'mongodb+srv://akromish:pass@cluster0.hhfak.mongodb.net/bikes?retryWrites=true&w=majority';
+const uri = 'mongodb+srv://akromish:pass@cluster0.hhfak.mongodb.net/bikes?retryWrites=true&w=majority';
 mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 const connection = mongoose.connection;
 
