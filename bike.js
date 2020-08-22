@@ -6,7 +6,7 @@ let Bike = require('./models/bike.model');
 router.get('/',function(req, res) {
     Bike.find(function(err, bikes) {
         if (err) {
-            console.log(err);
+            console.log(err + "hi");
         } else {
             res.json(bikes);
         }
