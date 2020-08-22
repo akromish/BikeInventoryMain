@@ -20,7 +20,9 @@ export default class EditBike extends Component {
     }
 
     componentDidMount() {
-        axios.get('http://localhost:4000/bikes/'+this.props.match.params.id)
+        const PORT = process.env.PORT || 4000;
+        const url = 'http://localhost:' + PORT + "/bikes/";
+        axios.get(url+this.props.match.params.id)
             .then(response => {
                 this.setState({
                     bike_name: response.data.bike_name,
@@ -67,7 +69,9 @@ export default class EditBike extends Component {
             bike_completed: this.state.bike_completed
         };
         console.log(obj);
-        axios.post('http://localhost:4000/bikes/update/'+this.props.match.params.id, obj)
+        const PORT = process.env.PORT || 4000;
+        const url = 'http://localhost:' + PORT + "/bikes/update/";
+        axios.post(url+this.props.match.params.id, obj)
             .then(res => console.log(res.data));
 
         this.props.history.push('/');

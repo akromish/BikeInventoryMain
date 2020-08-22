@@ -31,7 +31,9 @@ export default class BikesList extends Component {
     }
 
     componentDidMount() {
-        axios.get('http://localhost:4000/bikes/')
+        const PORT = process.env.PORT || 4000;
+        const url = 'http://localhost:' + PORT + "/bikes/";
+        axios.get(url)
             .then(response => {
                 this.setState({bikes: response.data});
             })

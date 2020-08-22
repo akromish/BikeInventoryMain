@@ -6,7 +6,7 @@ export default class ViewBike extends Component {
     render() {
         return (
             <div>
-                <h1>view bike</h1>
+                <h2>view bike</h2>
             </div>
         );
     }

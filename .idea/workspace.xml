@@ -20,7 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3da3f763-eed0-4c8c-bfc7-10312bf03e21" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/bike.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/bikes-list.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/bikes-list.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/create-bike.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/create-bike.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/edit-bike.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/edit-bike.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +44,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../mernapp_youtube" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="terminal" />
   </component>
@@ -62,6 +68,7 @@
       <workItem from="1598117286911" duration="145000" />
       <workItem from="1598117505573" duration="1160000" />
       <workItem from="1598118699960" duration="3050000" />
+      <workItem from="1598127060283" duration="4744000" />
     </task>
     <servers />
   </component>
@@ -97,5 +104,9 @@
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="533" y="201" key="SettingsEditor/2560.215.1920.1030/0.0.2048.1112/-1920.215.1920.1040@0.0.2048.1112" timestamp="1598064246964" />
+    <state x="687" y="243" width="672" height="678" key="search.everywhere.popup" timestamp="1598131222010">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="687" y="243" width="672" height="678" key="search.everywhere.popup/2560.215.1920.1030/0.0.2048.1112/-1920.215.1920.1040@0.0.2048.1112" timestamp="1598131222010" />
   </component>
 </project>
