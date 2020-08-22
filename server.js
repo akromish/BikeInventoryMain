@@ -11,7 +11,8 @@ let Bike = require('./models/bike.model');
 app.use(cors());
 app.use(bodyParser.json());
 
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/bikes', { useNewUrlParser: true });
+
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/local-app', { useNewUrlParser: true });
 const connection = mongoose.connection;
 
 connection.once('open', function() {
