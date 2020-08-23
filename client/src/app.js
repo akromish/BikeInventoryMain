@@ -8,6 +8,7 @@ import ViewBike from "./components/view-bike";
 import './app.css';
 
 class App extends Component {
+
     render() {
         return (
             <Router>

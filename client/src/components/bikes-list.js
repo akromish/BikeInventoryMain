@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 import {Link, Route} from 'react-router-dom';
-import axios from 'axios';
 import CreateBike from "./create-bike";
+const client = require('../client');
 
 const Bike = props => (
     <tr>
         <td>
             <Link style={{color: 'green'}} to={"/view/"+props.bike}>{props.bike.bike_name}</Link>
-            {/*<Link style={{color: 'green'}} to={"/view/"+props.bike._id}>{props.bike.bike_name}</Link>*/}
         </td>
         <td className={props.bike.bike_completed ? 'completed' : ''}>
             {props.bike.bike_type}
@@ -17,7 +16,6 @@ const Bike = props => (
         </td>
         <td>
             <Link to={"/edit/"+props.bike}>Edit</Link>
-            {/*<Link to={"/edit/"+props.bike._id}>Edit</Link>*/}
         </td>
     </tr>
 )
@@ -31,7 +29,8 @@ export default class BikesList extends Component {
     }
 
     componentDidMount() {
-        axios.get('/bikes/')
+
+        client.get('/bikes/')
             .then(response => {
                 this.setState({bikes: response.data});
             })

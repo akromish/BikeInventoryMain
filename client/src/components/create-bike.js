@@ -41,11 +41,11 @@ export default class CreateBike extends Component {
     onSubmit(e) {
         e.preventDefault();
 
-        console.log(`Bike submitted:`);
-        console.log(`Bike Name: ${this.state.bike_name}`);
-        console.log(`Bike Type: ${this.state.bike_type}`);
-        console.log(`Bike Wheel Size: ${this.state.bike_wheel_size}`);
-        console.log(`Bike Completed: ${this.state.bike_completed}`);
+        console.log(`Bikes submitted:`);
+        console.log(`Bikes Name: ${this.state.bike_name}`);
+        console.log(`Bikes Type: ${this.state.bike_type}`);
+        console.log(`Bikes Wheel Size: ${this.state.bike_wheel_size}`);
+        console.log(`Bikes Completed: ${this.state.bike_completed}`);
 
         const newBike = {
             bike_name: this.state.bike_name,
@@ -55,7 +55,7 @@ export default class CreateBike extends Component {
         }
 
 
-        axios.post('/bike/add', newBike)
+        axios.post('/bikes/add', newBike)
             .then(res => console.log(res.data));
 
         this.setState({
@@ -69,7 +69,7 @@ export default class CreateBike extends Component {
     render() {
         return (
             <div>
-                <h3>Add New Bike</h3>
+                <h3>Add New Bikes</h3>
                 <form onSubmit={this.onSubmit}>
 
                     <div className="form-group">
@@ -139,7 +139,7 @@ export default class CreateBike extends Component {
                     </div>
 
                     <div className="form-group">
-                        <input type="submit" value="Add Bike" className="btn btn-primary" />
+                        <input type="submit" value="Add Bikes" className="btn btn-primary" />
                     </div>
 
                 </form>
