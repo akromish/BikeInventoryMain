@@ -31,14 +31,12 @@ export default class BikesList extends Component {
     }
 
     componentDidMount() {
-        const PORT = process.env.PORT || 4000;
-        const url = 'http://localhost:' + PORT + "/bikes/";
-        axios.get(url)
+        axios.get('/bikes/')
             .then(response => {
                 this.setState({bikes: response.data});
             })
             .catch(function (error){
-                console.log(error + " at bike-list " + PORT);
+                console.log(error);
             })
     }
 

@@ -54,9 +54,8 @@ export default class CreateBike extends Component {
             bike_completed: this.state.bike_completed
         }
 
-        const PORT = process.env.PORT || 4000;
-        const url = 'http://localhost:' + PORT + "/bikes/add";
-        axios.post(url, newBike)
+
+        axios.post('/bike/add', newBike)
             .then(res => console.log(res.data));
 
         this.setState({
