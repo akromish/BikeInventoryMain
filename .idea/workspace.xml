@@ -20,11 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3da3f763-eed0-4c8c-bfc7-10312bf03e21" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/client/public/bike-diagram.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/create-bikes.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bikes.js" beforeDir="false" afterPath="$PROJECT_DIR$/bikes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/client.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/client.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/create-bike.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/create-bike.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/bike.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/bike.model.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,16 +47,20 @@
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2020.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\akram\Desktop\BikeInventory\client\public" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\akram\Desktop\BikeInventory\client\src\components" />
       <recent name="C:\Users\akram\Desktop\BikeInventory\client\src" />
       <recent name="C:\Users\akram\Desktop\BikeInventory" />
       <recent name="C:\Users\akram\Desktop\BikeInventory\models" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\akram\Desktop\BikeInventory\client\public" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\akram\AppData\Roaming\Subversion</configuration>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="3da3f763-eed0-4c8c-bfc7-10312bf03e21" name="Default Changelist" comment="" />
@@ -75,6 +78,8 @@
       <workItem from="1598199878940" duration="6353000" />
       <workItem from="1598208779553" duration="418000" />
       <workItem from="1598218176503" duration="2676000" />
+      <workItem from="1598236644389" duration="2054000" />
+      <workItem from="1598246341334" duration="2563000" />
     </task>
     <servers />
   </component>
@@ -101,18 +106,30 @@
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="789" y="358" key="#com.intellij.fileTypes.FileTypeChooser/2560.215.1920.1030/0.0.2048.1112/-1920.215.1920.1040@0.0.2048.1112" timestamp="1598063918512" />
-    <state x="804" y="297" key="FileChooserDialogImpl" timestamp="1598209168927">
+    <state x="804" y="297" key="FileChooserDialogImpl" timestamp="1598236694058">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="-1166" y="493" key="FileChooserDialogImpl/2560.215.1920.1030/0.0.2048.1112/-1920.215.1920.1040@-1920.215.1920.1040" timestamp="1598115141740" />
-    <state x="804" y="297" key="FileChooserDialogImpl/2560.215.1920.1030/0.0.2048.1112/-1920.215.1920.1040@0.0.2048.1112" timestamp="1598209168927" />
+    <state x="804" y="297" key="FileChooserDialogImpl/2560.215.1920.1030/0.0.2048.1112/-1920.215.1920.1040@0.0.2048.1112" timestamp="1598236694058" />
+    <state x="895" y="454" key="Github.ShareDialog" timestamp="1598236736368">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="895" y="454" key="Github.ShareDialog/2560.215.1920.1030/0.0.2048.1112/-1920.215.1920.1040@0.0.2048.1112" timestamp="1598236736368" />
     <state x="533" y="201" key="SettingsEditor" timestamp="1598064246964">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="533" y="201" key="SettingsEditor/2560.215.1920.1030/0.0.2048.1112/-1920.215.1920.1040@0.0.2048.1112" timestamp="1598064246964" />
+    <state x="617" y="289" key="Vcs.Push.Dialog.v2" timestamp="1598236718681">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="617" y="289" key="Vcs.Push.Dialog.v2/2560.215.1920.1030/0.0.2048.1112/-1920.215.1920.1040@0.0.2048.1112" timestamp="1598236718681" />
     <state x="687" y="243" width="672" height="678" key="search.everywhere.popup" timestamp="1598131222010">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="687" y="243" width="672" height="678" key="search.everywhere.popup/2560.215.1920.1030/0.0.2048.1112/-1920.215.1920.1040@0.0.2048.1112" timestamp="1598131222010" />
+    <state x="855" y="347" key="svn.repositoryBrowser" timestamp="1598236695288">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="855" y="347" key="svn.repositoryBrowser/2560.215.1920.1030/0.0.2048.1112/-1920.215.1920.1040@0.0.2048.1112" timestamp="1598236695288" />
   </component>
 </project>

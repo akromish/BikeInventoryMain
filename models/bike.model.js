@@ -8,7 +8,31 @@ let Bike = new Schema({
     bike_type: {
         type: String
     },
-    bike_wheel_size: {
+    bike_front_wheel_size: {
+        type: String
+    },
+    bike_rear_wheel_size: {
+        type: String
+    },
+    bike_size: {
+        type: String
+    },
+    bike_pedal: {
+        type: String
+    },
+    bike_saddle: {
+        type: String
+    },
+    bike_groupset: {
+        type: String
+    },
+    bike_fork: {
+        type: String
+    },
+    bike_brakes: {
+
+    },
+    bike_stem_length: {
         type: String
     },
     bike_completed: {

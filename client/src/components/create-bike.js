@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
+import './create-bikes.css';
 const client = require('../client');
 
 export default class CreateBike extends Component {
 
     constructor(props) {
+
         super(props);
 
         this.onChangeBikeName = this.onChangeBikeName.bind(this);
@@ -68,93 +70,34 @@ export default class CreateBike extends Component {
 
     render() {
         return (
-            <div style={{backgroundImage: "url("+process.env.PUBLIC_URL + '/bike-diagram.png' + ")"}}>
-                <h3>Add New Bikes</h3>
-                <img src={process.env.PUBLIC_URL + '/bike-diagram.png'} style={{visibility: 'hidden'}} alt={""} />
-                <form onSubmit={this.onSubmit}>
+            <div className="diagram">
+                <div className="form-space">
+                    <h3>Add New Bikes</h3>
 
-                    <div className="row">
-                        <div className="col">
-                            <label>Name: </label>
-                            <input  type="text"
-                                    className="form-control"
-                                    value={this.state.bike_name}
-                                    onChange={this.onChangeBikeName}
-                            />
-                        </div>
-                        <div className="col">
-                            <label>Name: </label>
-                            <input  type="text"
-                                    className="form-control"
-                                    value={this.state.bike_name}
-                                    onChange={this.onChangeBikeName}
-                            />
-                        </div>
-
-                    </div>
-
-                    <div className="form-group">
-                        <label>Type: </label>
-                        <input
-                                type="text"
-                                className="form-control"
-                                value={this.state.bike_type}
-                                onChange={this.onChangeBikeType}
+                    <form onSubmit={this.onSubmit}>
+                        <div className="row">
+                            <div className="col">
+                                <label>Name: </label>
+                                <input  type="text"
+                                        className="form-control"
+                                        value={this.state.bike_name}
+                                        onChange={this.onChangeBikeName}
                                 />
-                    </div>
+                            </div>
+                            <div className="col">
+                                <label>Name: </label>
+                                <input  type="text"
+                                        className="form-control"
+                                        value={this.state.bike_name}
+                                        onChange={this.onChangeBikeName}
+                                />
+                            </div>
 
-                    <div className="form-group">
-                        <div className="form-check form-check-inline">
-                            <input  className="form-check-input"
-                                    type="radio"
-                                    name="wheelSize"
-                                    id='26"'
-                                    value='26"'
-                                    checked={this.state.bike_wheel_size==='26"'}
-                                    onChange={this.onChangeBikeWheelSize}
-                            />
-                            <label className="form-check-label">26"</label>
                         </div>
-                        <div className="form-check form-check-inline">
-                            <input  className="form-check-input"
-                                    type="radio"
-                                    name="wheelSize"
-                                    id='27.5"/650b'
-                                    value='27.5"/650b'
-                                    checked={this.state.bike_wheel_size==='27.5"/650b'}
-                                    onChange={this.onChangeBikeWheelSize}
-                            />
-                            <label className="form-check-label">27.5"/650b</label>
-                        </div>
-                        <div className="form-check form-check-inline">
-                            <input  className="form-check-input"
-                                    type="radio"
-                                    name="wheelSize"
-                                    id='29"'
-                                    value='29"'
-                                    checked={this.state.bike_wheel_size==='29"'}
-                                    onChange={this.onChangeBikeWheelSize}
-                            />
-                            <label className="form-check-label">29"</label>
-                        </div>
-                        <div className="form-check form-check-inline">
-                            <input  className="form-check-input"
-                                    type="radio"
-                                    name="wheelSize"
-                                    id='700c'
-                                    value='700c'
-                                    checked={this.state.bike_wheel_size==='700c'}
-                                    onChange={this.onChangeBikeWheelSize}
-                            />
-                            <label className="form-check-label">700c</label>
-                        </div>
-                    </div>
 
-                    <div className="form-group">
-                        <input type="submit" value="Add Bikes" className="btn btn-primary" />
-                    </div>
 
-                </form>
+                    </form>
+                </div>
             </div>
         )
     }
