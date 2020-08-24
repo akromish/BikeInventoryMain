@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import axios from 'axios';
+const client = require('../client');
 
 export default class CreateBike extends Component {
 
@@ -55,7 +55,7 @@ export default class CreateBike extends Component {
         }
 
 
-        axios.post('/bikes/add', newBike)
+        client.post('/bikes/add/', newBike)
             .then(res => console.log(res.data));
 
         this.setState({
@@ -68,17 +68,29 @@ export default class CreateBike extends Component {
 
     render() {
         return (
-            <div>
+            <div style={{backgroundImage: "url("+process.env.PUBLIC_URL + '/bike-diagram.png' + ")"}}>
                 <h3>Add New Bikes</h3>
+                <img src={process.env.PUBLIC_URL + '/bike-diagram.png'} style={{visibility: 'hidden'}} alt={""} />
                 <form onSubmit={this.onSubmit}>
 
-                    <div className="form-group">
-                        <label>Name: </label>
-                        <input  type="text"
-                                className="form-control"
-                                value={this.state.bike_name}
-                                onChange={this.onChangeBikeName}
-                                />
+                    <div className="row">
+                        <div className="col">
+                            <label>Name: </label>
+                            <input  type="text"
+                                    className="form-control"
+                                    value={this.state.bike_name}
+                                    onChange={this.onChangeBikeName}
+                            />
+                        </div>
+                        <div className="col">
+                            <label>Name: </label>
+                            <input  type="text"
+                                    className="form-control"
+                                    value={this.state.bike_name}
+                                    onChange={this.onChangeBikeName}
+                            />
+                        </div>
+
                     </div>
 
                     <div className="form-group">

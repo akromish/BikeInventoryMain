@@ -1,8 +1,7 @@
-var axios = require('axios');
+const axios = require('axios');
 
 const PORT = process.env.PORT || 4000;
-var axiosInstance = axios.create({
-
+const axiosInstance = axios.create({
     baseURL: 'http://localhost:' + PORT,
 });
 
