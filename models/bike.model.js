@@ -30,7 +30,7 @@ let Bike = new Schema({
         type: String
     },
     bike_brakes: {
-
+        type: String
     },
     bike_stem_length: {
         type: String
