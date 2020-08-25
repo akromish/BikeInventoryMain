@@ -8,10 +8,10 @@ let Bike = new Schema({
     bike_type: {
         type: String
     },
-    bike_front_wheel_size: {
+    bike_f_wheel_size: {
         type: String
     },
-    bike_rear_wheel_size: {
+    bike_r_wheel_size: {
         type: String
     },
     bike_size: {
@@ -35,9 +35,6 @@ let Bike = new Schema({
     bike_stem_length: {
         type: String
     },
-    bike_completed: {
-        type: Boolean
-    }
 });
 
 module.exports = mongoose.model('Bike', Bike);
