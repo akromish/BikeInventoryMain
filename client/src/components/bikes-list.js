@@ -4,24 +4,17 @@ import CreateBike from "./create-bike";
 const client = require('../client');
 
 const Bike = props => (
+
     <tr>
-        <td>
-            <Link style={{color: 'grey'}} to={"/view/"+props.bike}>{props.bike.bike_name}</Link>
-        </td>
-        <td className={props.bike.bike_completed ? 'completed' : ''}>
-            {props.bike.bike_type}
-        </td>
-        <td className={props.bike.bike_completed ? 'completed' : ''}>
-            {props.bike.bike_wheel_size}
-        </td>
-        <td>
-            <Link to={"/edit/"+props.bike}>Edit</Link>
-        </td>
+        <td><Link style={{color: 'grey'}} to={"/view/"+props.bike}>{props.bike.bike_name}</Link></td>
+        <td>{props.bike.bike_type} </td>
+        <td>{props.bike.bike_size}</td>
+        <td><Link to={"/edit/"+props.bike}>Edit</Link> </td>
     </tr>
+
 )
 
-
-export default class BikesList extends Component {
+class BikesList extends Component {
 
     constructor(props) {
         super(props);
@@ -47,6 +40,7 @@ export default class BikesList extends Component {
 
     render() {
         return (
+
             <div>
                 <h3>Your Bikes:</h3>
                 <table className="table">
@@ -54,7 +48,7 @@ export default class BikesList extends Component {
                         <tr>
                             <th>Name</th>
                             <th>Type</th>
-                            <th>Wheel Size</th>
+                            <th>Size</th>
                             <th>Edit?</th>
                         </tr>
                     </thead>
@@ -65,6 +59,9 @@ export default class BikesList extends Component {
                 <Link style={{border: "2px solid"}} to="/create">Add New Bike</Link>
                 <Route path="/create" component={CreateBike} />
             </div>
+
         )
     }
 }
+
+export default BikesList;

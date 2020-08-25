@@ -113,7 +113,7 @@ class CreateBike extends Component {
             bike_name: this.state.bike_name,
             bike_type: this.state.bike_type,
             bike_f_wheel_size: this.state.bike_f_wheel_size,
-            bike_rear_wheel_size: this.state.bike_r_wheel_size,
+            bike_r_wheel_size: this.state.bike_r_wheel_size,
             bike_size: this.state.bike_size,
             bike_pedal: this.state.bike_pedal,
             bike_saddle: this.state.bike_saddle,
@@ -130,7 +130,7 @@ class CreateBike extends Component {
             bike_name: '',
             bike_type: '',
             bike_f_wheel_size: '',
-            bike_rear_wheel_size: '',
+            bike_r_wheel_size: '',
             bike_size: '',
             bike_pedal:'',
             bike_saddle: '',
@@ -146,92 +146,94 @@ class CreateBike extends Component {
         return (
 
             <div>
-                <h3>Add a new bike:</h3>
-                <form onSubmit={this.onSubmit}>
-                    <div className="form-group">
+                <div style={{float: "left", width: "33%%"}}>
+                    <h3>Add a new bike:</h3>
+                    <form onSubmit={this.onSubmit}>
+                        <div className="form-group">
 
-                        <label>Name/Model: </label>
-                        <input  type="text"
-                                className="form-control"
-                                value={this.state.bike_name}
-                                onChange={this.onChangeBikeName}
-                        />
+                            <label>Name/Model: </label>
+                            <input  type="text"
+                                    className="form-control"
+                                    value={this.state.bike_name}
+                                    onChange={this.onChangeBikeName}
+                            />
 
-                        <label>Bike Type: </label>
-                        <input  type="text"
-                                className="form-control"
-                                value={this.state.bike_name}
-                                onChange={this.onChangeBikeType}
-                        />
+                            <label>Bike Type: </label>
+                            <input  type="text"
+                                    className="form-control"
+                                    value={this.state.bike_type}
+                                    onChange={this.onChangeBikeType}
+                            />
 
-                        <label>Bike Size: </label>
-                        <input  type="text"
-                                className="form-control"
-                                value={this.state.bike_name}
-                                onChange={this.onChangeBikeSize}
-                        />
+                            <label>Bike Size: </label>
+                            <input  type="text"
+                                    className="form-control"
+                                    value={this.state.bike_size}
+                                    onChange={this.onChangeBikeSize}
+                            />
 
-                        <label>Front Wheel Size: </label>
-                        <input  type="text"
-                                className="form-control"
-                                value={this.state.bike_name}
-                                onChange={this.onChangeBikeFWheel}
-                        />
+                            <label>Front Wheel Size: </label>
+                            <input  type="text"
+                                    className="form-control"
+                                    value={this.state.bike_f_wheel_size}
+                                    onChange={this.onChangeBikeFWheel}
+                            />
 
-                        <label>Rear Wheel Size: </label>
-                        <input  type="text"
-                                className="form-control"
-                                value={this.state.bike_name}
-                                onChange={this.onChangeBikeRWheel}
-                        />
+                            <label>Rear Wheel Size: </label>
+                            <input  type="text"
+                                    className="form-control"
+                                    value={this.state.bike_r_wheel_size}
+                                    onChange={this.onChangeBikeRWheel}
+                            />
 
-                        <label>Pedals: </label>
-                        <input  type="text"
-                                className="form-control"
-                                value={this.state.bike_name}
-                                onChange={this.onChangeBikePedal}
-                        />
+                            <label>Pedals: </label>
+                            <input  type="text"
+                                    className="form-control"
+                                    value={this.state.bike_pedal}
+                                    onChange={this.onChangeBikePedal}
+                            />
 
-                        <label>Saddle/Seat: </label>
-                        <input  type="text"
-                                className="form-control"
-                                value={this.state.bike_name}
-                                onChange={this.onChangeBikeSaddle}
-                        />
+                            <label>Saddle/Seat: </label>
+                            <input  type="text"
+                                    className="form-control"
+                                    value={this.state.bike_saddle}
+                                    onChange={this.onChangeBikeSaddle}
+                            />
 
-                        <label>Groupset: </label>
-                        <input  type="text"
-                                className="form-control"
-                                value={this.state.bike_name}
-                                onChange={this.onChangeBikeGroup}
-                        />
+                            <label>Groupset: </label>
+                            <input  type="text"
+                                    className="form-control"
+                                    value={this.state.bike_groupset}
+                                    onChange={this.onChangeBikeGroup}
+                            />
 
-                        <label>Fork: </label>
-                        <input  type="text"
-                                className="form-control"
-                                value={this.state.bike_name}
-                                onChange={this.onChangeBikeFork}
-                        />
+                            <label>Fork: </label>
+                            <input  type="text"
+                                    className="form-control"
+                                    value={this.state.bike_fork}
+                                    onChange={this.onChangeBikeFork}
+                            />
 
-                        <label>Brakes: </label>
-                        <input  type="text"
-                                className="form-control"
-                                value={this.state.bike_name}
-                                onChange={this.onChangeBikeBrakes}
-                        />
+                            <label>Brakes: </label>
+                            <input  type="text"
+                                    className="form-control"
+                                    value={this.state.bike_brakes}
+                                    onChange={this.onChangeBikeBrakes}
+                            />
 
-                        <label>Stem Length: </label>
-                        <input  type="text"
-                                className="form-control"
-                                value={this.state.bike_name}
-                                onChange={this.onChangeBikeStemLength}
-                        />
-                        <br/>
+                            <label>Stem Length: </label>
+                            <input  type="text"
+                                    className="form-control"
+                                    value={this.state.bike_stem_length}
+                                    onChange={this.onChangeBikeStemLength}
+                            />
+                            <br/>
 
-                        <button type="submit" className="btn btn-primary">Save Bike</button>
-
-                    </div>
+                            <button type="submit" className="btn btn-primary">Save Bike</button>
+                        </div>
                 </form>
+                </div>
+                <img src={process.env.PUBLIC_URL + '/bike-diagram.png'} style={{float: "right center", width: "67%", paddingTop: "10%"}} alt={""} />
             </div>
 
         )
