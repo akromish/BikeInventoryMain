@@ -1,32 +1,58 @@
 import React, { Component } from 'react';
-import axios from 'axios';
+const client = require('../client');
 
-export default class EditBike extends Component {
+class EditBike extends Component {
+
     constructor(props) {
+
         super(props);
 
         this.onChangeBikeName = this.onChangeBikeName.bind(this);
         this.onChangeBikeType = this.onChangeBikeType.bind(this);
-        this.onChangeBikeWheelSize = this.onChangeBikeWheelSize.bind(this);
-        this.onChangeBikeCompleted = this.onChangeBikeCompleted.bind(this);
+        this.onChangeBikeFWheel = this.onChangeBikeFWheel.bind(this);
+        this.onChangeBikeRWheel = this.onChangeBikeRWheel.bind(this);
+        this.onChangeBikeSize = this.onChangeBikeSize.bind(this);
+        this.onChangeBikePedal = this.onChangeBikePedal.bind(this);
+        this.onChangeBikeSaddle = this.onChangeBikeSaddle.bind(this);
+        this.onChangeBikeGroup = this.onChangeBikeGroup.bind(this);
+        this.onChangeBikeFork = this.onChangeBikeFork.bind(this);
+        this.onChangeBikeBrakes = this.onChangeBikeBrakes.bind(this);
+        this.onChangeBikeStemLength = this.onChangeBikeStemLength.bind(this);
+
         this.onSubmit = this.onSubmit.bind(this);
 
         this.state = {
             bike_name: '',
             bike_type: '',
-            bike_wheel_size: '',
-            bike_completed: false
+            bike_f_wheel_size: '',
+            bike_r_wheel_size: '',
+            bike_size: '',
+            bike_pedal:'',
+            bike_saddle: '',
+            bike_groupset: '',
+            bike_fork: '',
+            bike_brakes: '',
+            bike_stem_length: ''
         }
+
     }
 
     componentDidMount() {
-        axios.get('/bikes/'+this.props.match.params.id)
+        console.log('/bikes/'+this.props.match.params.id) //error here
+        client.get('/bikes/'+this.props.match.params.id)
             .then(response => {
                 this.setState({
                     bike_name: response.data.bike_name,
                     bike_type: response.data.bike_type,
-                    bike_wheel_size: response.data.bike_wheel_size,
-                    bike_completed: response.data.bike_completed
+                    bike_f_wheel_size: response.data.bike_f_wheel_size,
+                    bike_r_wheel_size: response.data.bike_r_wheel_size,
+                    bike_size: response.data.bike_size,
+                    bike_pedal: response.data.bike_pedal,
+                    bike_saddle: response.data.bike_saddle,
+                    bike_groupset: response.data.bike_groupset,
+                    bike_fork: response.data.bike_fork,
+                    bike_brakes: response.data.bike_brakes,
+                    bike_stem_length: response.data.bike_stem_length,
                 })
             })
             .catch(function (error) {
@@ -46,28 +72,81 @@ export default class EditBike extends Component {
         });
     }
 
-    onChangeBikeWheelSize(e) {
+    onChangeBikeFWheel(e) {
         this.setState({
-            bike_wheel_size: e.target.value
+            bike_f_wheel_size: e.target.value
         });
     }
 
-    onChangeBikeCompleted(e) {
+    onChangeBikeRWheel(e) {
         this.setState({
-            bike_completed: !this.state.bike_completed
+            bike_r_wheel_size: e.target.value
+        });
+    }
+
+    onChangeBikeSize(e) {
+        this.setState({
+            bike_size: e.target.value
+        });
+    }
+
+    onChangeBikePedal(e) {
+        this.setState({
+            bike_pedal: e.target.value
+        });
+    }
+
+    onChangeBikeSaddle(e) {
+        this.setState({
+            bike_saddle: e.target.value
+        });
+    }
+
+    onChangeBikeGroup(e) {
+        this.setState({
+            bike_groupset: e.target.value
+        });
+    }
+
+    onChangeBikeFork(e) {
+        this.setState({
+            bike_fork: e.target.value
+        });
+    }
+
+    onChangeBikeBrakes(e) {
+        this.setState({
+            bike_brakes: e.target.value
+        });
+    }
+
+    onChangeBikeStemLength(e) {
+        this.setState({
+            bike_stem_length: e.target.value
         });
     }
 
     onSubmit(e) {
+
         e.preventDefault();
-        const obj = {
+
+        console.log(`Bike updated Chief!`);
+
+        const updatedBike = {
             bike_name: this.state.bike_name,
             bike_type: this.state.bike_type,
-            bike_wheel_size: this.state.bike_wheel_size,
-            bike_completed: this.state.bike_completed
+            bike_f_wheel_size: this.state.bike_f_wheel_size,
+            bike_r_wheel_size: this.state.bike_r_wheel_size,
+            bike_size: this.state.bike_size,
+            bike_pedal: this.state.bike_pedal,
+            bike_saddle: this.state.bike_saddle,
+            bike_groupset: this.state.bike_groupset,
+            bike_fork: this.state.bike_fork,
+            bike_brakes: this.state.bike_brakes,
+            bike_stem_length: this.state.bike_stem_length
         };
-        console.log(obj);
-        axios.post('/bikes/update/'+this.props.match.params.id, obj)
+
+        client.post('/bikes/update/'+this.props.match.params.id, updatedBike)
             .then(res => console.log(res.data));
 
         this.props.history.push('/');
@@ -75,93 +154,100 @@ export default class EditBike extends Component {
 
     render() {
         return (
+
             <div>
-                <h3 align="center">Update Bike</h3>
-                <form onSubmit={this.onSubmit}>
-                    <div className="form-group">
-                        <label>Name: </label>
-                        <input  type="text"
-                                className="form-control"
-                                value={this.state.bike_name}
-                                onChange={this.onChangeBikeName}
-                        />
-                    </div>
-                    <div className="form-group">
-                        <label>Type: </label>
-                        <input
-                            type="text"
-                            className="form-control"
-                            value={this.state.bike_type}
-                            onChange={this.onChangeBikeType}
-                        />
-                    </div>
-                    <div className="form-group">
-                        <div className="form-check form-check-inline">
-                            <input  className="form-check-input"
-                                    type="radio"
-                                    name="wheelSize"
-                                    id='26"'
-                                    value='26"'
-                                    checked={this.state.bike_wheel_size==='26"'}
-                                    onChange={this.onChangeBikeWheelSize}
-                            />
-                            <label className="form-check-label">26"</label>
-                        </div>
-                        <div className="form-check form-check-inline">
-                            <input  className="form-check-input"
-                                    type="radio"
-                                    name="wheelSize"
-                                    id='27.5"/650b'
-                                    value='27.5"/650b'
-                                    checked={this.state.bike_wheel_size==='27.5"/650b'}
-                                    onChange={this.onChangeBikeWheelSize}
-                            />
-                            <label className="form-check-label">27.5"/650b</label>
-                        </div>
-                        <div className="form-check form-check-inline">
-                            <input  className="form-check-input"
-                                    type="radio"
-                                    name="wheelSize"
-                                    id='29"'
-                                    value='29"'
-                                    checked={this.state.bike_wheel_size==='29"'}
-                                    onChange={this.onChangeBikeWheelSize}
-                            />
-                            <label className="form-check-label">29"</label>
-                        </div>
-                        <div className="form-check form-check-inline">
-                            <input  className="form-check-input"
-                                    type="radio"
-                                    name="wheelSize"
-                                    id='700c'
-                                    value='700c'
-                                    checked={this.state.bike_wheel_size==='700c'}
-                                    onChange={this.onChangeBikeWheelSize}
-                            />
-                            <label className="form-check-label">700c</label>
-                        </div>
-                    </div>
-                    <div className="form-check">
-                        <input  className="form-check-input"
-                                id="completedCheckbox"
-                                type="checkbox"
-                                name="completedCheckbox"
-                                onChange={this.onChangeBikeCompleted}
-                                checked={this.state.bike_completed}
-                                value={this.state.bike_completed}
-                        />
-                        <label className="form-check-label" htmlFor="completedCheckbox">
-                            Completed
-                        </label>
-                    </div>
+                <div style={{float: "left", width: "33%%"}}>
+                    <h3>Edit bike:</h3>
+                    <form onSubmit={this.onSubmit}>
+                        <div className="form-group">
 
-                    <br />
+                            <label>Name/Model: </label>
+                            <input  type="text"
+                                    className="form-control"
+                                    value={this.state.bike_name}
+                                    onChange={this.onChangeBikeName}
+                            />
 
-                    <div className="form-group">
-                        <input type="submit" value="Update Todo" className="btn btn-primary" />
-                    </div>
-                </form>
+                            <label>Bike Type: </label>
+                            <input  type="text"
+                                    className="form-control"
+                                    value={this.state.bike_type}
+                                    onChange={this.onChangeBikeType}
+                            />
+
+                            <label>Bike Size: </label>
+                            <input  type="text"
+                                    className="form-control"
+                                    value={this.state.bike_size}
+                                    onChange={this.onChangeBikeSize}
+                            />
+
+                            <label>Front Wheel Size: </label>
+                            <input  type="text"
+                                    className="form-control"
+                                    value={this.state.bike_f_wheel_size}
+                                    onChange={this.onChangeBikeFWheel}
+                            />
+
+                            <label>Rear Wheel Size: </label>
+                            <input  type="text"
+                                    className="form-control"
+                                    value={this.state.bike_r_wheel_size}
+                                    onChange={this.onChangeBikeRWheel}
+                            />
+
+                            <label>Pedals: </label>
+                            <input  type="text"
+                                    className="form-control"
+                                    value={this.state.bike_pedal}
+                                    onChange={this.onChangeBikePedal}
+                            />
+
+                            <label>Saddle/Seat: </label>
+                            <input  type="text"
+                                    className="form-control"
+                                    value={this.state.bike_saddle}
+                                    onChange={this.onChangeBikeSaddle}
+                            />
+
+                            <label>Groupset: </label>
+                            <input  type="text"
+                                    className="form-control"
+                                    value={this.state.bike_groupset}
+                                    onChange={this.onChangeBikeGroup}
+                            />
+
+                            <label>Fork: </label>
+                            <input  type="text"
+                                    className="form-control"
+                                    value={this.state.bike_fork}
+                                    onChange={this.onChangeBikeFork}
+                            />
+
+                            <label>Brakes: </label>
+                            <input  type="text"
+                                    className="form-control"
+                                    value={this.state.bike_brakes}
+                                    onChange={this.onChangeBikeBrakes}
+                            />
+
+                            <label>Stem Length: </label>
+                            <input  type="text"
+                                    className="form-control"
+                                    value={this.state.bike_stem_length}
+                                    onChange={this.onChangeBikeStemLength}
+                            />
+                            <br/>
+
+                            <button type="submit" className="btn btn-primary">Save Bike</button>
+                        </div>
+                    </form>
+                </div>
+                <img src={process.env.PUBLIC_URL + '/bike-diagram.png'} style={{float: "right center", width: "67%", paddingTop: "10%"}} alt={""} />
             </div>
+
         )
     }
 }
+
+export default EditBike;
