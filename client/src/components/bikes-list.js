@@ -6,7 +6,7 @@ const client = require('../client');
 const Bike = props => (
     <tr>
         <td>
-            <Link style={{color: 'green'}} to={"/view/"+props.bike}>{props.bike.bike_name}</Link>
+            <Link style={{color: 'grey'}} to={"/view/"+props.bike}>{props.bike.bike_name}</Link>
         </td>
         <td className={props.bike.bike_completed ? 'completed' : ''}>
             {props.bike.bike_type}

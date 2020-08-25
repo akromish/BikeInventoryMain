@@ -144,17 +144,96 @@ class CreateBike extends Component {
 
     render() {
         return (
+
             <div>
-                <h3>Add New Bikes</h3>
+                <h3>Add a new bike:</h3>
                 <form onSubmit={this.onSubmit}>
-                            <label>Name/Model: </label>
-                            <input  type="text"
-                                    className="form-control"
-                                    value={this.state.bike_name}
-                                    onChange={this.onChangeBikeName}
-                            />
+                    <div className="form-group">
+
+                        <label>Name/Model: </label>
+                        <input  type="text"
+                                className="form-control"
+                                value={this.state.bike_name}
+                                onChange={this.onChangeBikeName}
+                        />
+
+                        <label>Bike Type: </label>
+                        <input  type="text"
+                                className="form-control"
+                                value={this.state.bike_name}
+                                onChange={this.onChangeBikeType}
+                        />
+
+                        <label>Bike Size: </label>
+                        <input  type="text"
+                                className="form-control"
+                                value={this.state.bike_name}
+                                onChange={this.onChangeBikeSize}
+                        />
+
+                        <label>Front Wheel Size: </label>
+                        <input  type="text"
+                                className="form-control"
+                                value={this.state.bike_name}
+                                onChange={this.onChangeBikeFWheel}
+                        />
+
+                        <label>Rear Wheel Size: </label>
+                        <input  type="text"
+                                className="form-control"
+                                value={this.state.bike_name}
+                                onChange={this.onChangeBikeRWheel}
+                        />
+
+                        <label>Pedals: </label>
+                        <input  type="text"
+                                className="form-control"
+                                value={this.state.bike_name}
+                                onChange={this.onChangeBikePedal}
+                        />
+
+                        <label>Saddle/Seat: </label>
+                        <input  type="text"
+                                className="form-control"
+                                value={this.state.bike_name}
+                                onChange={this.onChangeBikeSaddle}
+                        />
+
+                        <label>Groupset: </label>
+                        <input  type="text"
+                                className="form-control"
+                                value={this.state.bike_name}
+                                onChange={this.onChangeBikeGroup}
+                        />
+
+                        <label>Fork: </label>
+                        <input  type="text"
+                                className="form-control"
+                                value={this.state.bike_name}
+                                onChange={this.onChangeBikeFork}
+                        />
+
+                        <label>Brakes: </label>
+                        <input  type="text"
+                                className="form-control"
+                                value={this.state.bike_name}
+                                onChange={this.onChangeBikeBrakes}
+                        />
+
+                        <label>Stem Length: </label>
+                        <input  type="text"
+                                className="form-control"
+                                value={this.state.bike_name}
+                                onChange={this.onChangeBikeStemLength}
+                        />
+                        <br/>
+
+                        <button type="submit" className="btn btn-primary">Save Bike</button>
+
+                    </div>
                 </form>
             </div>
+
         )
     }
 }

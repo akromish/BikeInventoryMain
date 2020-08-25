@@ -1,11 +1,11 @@
 body {
-  background-color: beige;
+  background-color: lightskyblue;
   padding: 10px;
   margin: 10px 20px 20px 20px;
 }
 
 .app-title {
-  color: darkblue;
+  color: green;
   font-size: 50px;
 }
 
