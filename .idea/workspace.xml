@@ -21,8 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="3da3f763-eed0-4c8c-bfc7-10312bf03e21" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/create-bike.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/create-bike.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/bike.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/bike.model.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +78,7 @@
       <workItem from="1598218176503" duration="2676000" />
       <workItem from="1598236644389" duration="2054000" />
       <workItem from="1598246341334" duration="2899000" />
-      <workItem from="1598371245467" duration="4146000" />
+      <workItem from="1598371245467" duration="4681000" />
     </task>
     <servers />
   </component>
