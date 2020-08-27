@@ -20,9 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3da3f763-eed0-4c8c-bfc7-10312bf03e21" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/edit-bike.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/edit-bike.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/bikes-list.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/bikes-list.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/view-bike.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/view-bike.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +81,7 @@
       <workItem from="1598246341334" duration="2899000" />
       <workItem from="1598371245467" duration="11748000" />
       <workItem from="1598477515933" duration="1133000" />
-      <workItem from="1598549004979" duration="844000" />
+      <workItem from="1598549004979" duration="1572000" />
     </task>
     <servers />
   </component>

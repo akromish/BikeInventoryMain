@@ -147,7 +147,7 @@ class CreateBike extends Component {
 
             <div>
                 <div style={{float: "left", width: "33%%"}}>
-                    <h3>Add a new bike:</h3>
+                    <h2>Add a new bike:</h2>
                     <form onSubmit={this.onSubmit}>
                         <div className="form-group">
 
