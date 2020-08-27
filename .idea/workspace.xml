@@ -1,28 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BranchesTreeState">
-    <expand>
+    <expand />
+    <select>
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
       </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:heroku" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-    </expand>
-    <select />
+    </select>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3da3f763-eed0-4c8c-bfc7-10312bf03e21" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/bikes-list.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/bikes-list.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/view-bike.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/view-bike.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/client.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/client.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +32,9 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/client/public" />
+    <property name="javascript.nodejs.core.library.configured.version" value="12.18.3" />
+    <property name="javascript.nodejs.core.library.typings.version" value="12.12.54" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../mernapp_youtube" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="terminal" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2020.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
@@ -81,7 +75,7 @@
       <workItem from="1598246341334" duration="2899000" />
       <workItem from="1598371245467" duration="11748000" />
       <workItem from="1598477515933" duration="1133000" />
-      <workItem from="1598549004979" duration="1572000" />
+      <workItem from="1598549004979" duration="5016000" />
     </task>
     <servers />
   </component>
@@ -104,19 +98,19 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="789" y="358" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1598063918512">
+    <state x="789" y="358" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1598554220454">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state x="789" y="358" key="#com.intellij.fileTypes.FileTypeChooser/2560.215.1920.1030/0.0.2048.1112/-1920.215.1920.1040@0.0.2048.1112" timestamp="1598063918512" />
+    <state x="789" y="358" key="#com.intellij.fileTypes.FileTypeChooser/2560.215.1920.1030/0.0.2048.1112/-1920.215.1920.1040@0.0.2048.1112" timestamp="1598554220454" />
     <state x="93" y="93" width="1862" height="926" key="DiffContextDialog" timestamp="1598249263034">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="93" y="93" width="1862" height="926" key="DiffContextDialog/2560.215.1920.1030/0.0.2048.1112/-1920.215.1920.1040@0.0.2048.1112" timestamp="1598249263034" />
-    <state x="804" y="297" key="FileChooserDialogImpl" timestamp="1598236694058">
+    <state x="804" y="297" key="FileChooserDialogImpl" timestamp="1598554217499">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="-1166" y="493" key="FileChooserDialogImpl/2560.215.1920.1030/0.0.2048.1112/-1920.215.1920.1040@-1920.215.1920.1040" timestamp="1598115141740" />
-    <state x="804" y="297" key="FileChooserDialogImpl/2560.215.1920.1030/0.0.2048.1112/-1920.215.1920.1040@0.0.2048.1112" timestamp="1598236694058" />
+    <state x="804" y="297" key="FileChooserDialogImpl/2560.215.1920.1030/0.0.2048.1112/-1920.215.1920.1040@0.0.2048.1112" timestamp="1598554217499" />
     <state x="895" y="454" key="Github.ShareDialog" timestamp="1598236736368">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
