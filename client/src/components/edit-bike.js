@@ -38,7 +38,6 @@ class EditBike extends Component {
     }
 
     componentDidMount() {
-        console.log('/bikes/'+this.props.match.params.id) //error here
         client.get('/bikes/'+this.props.match.params.id)
             .then(response => {
                 this.setState({

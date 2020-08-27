@@ -9,7 +9,7 @@ const Bike = props => (
         <td><Link style={{color: 'grey'}} to={"/view/"+props.bike}>{props.bike.bike_name}</Link></td>
         <td>{props.bike.bike_type} </td>
         <td>{props.bike.bike_size}</td>
-        <td><Link to={"/edit/"+props.bike}>Edit</Link> </td>
+        <td><Link to={"/edit/"+props.bike._id}>Edit</Link> </td>
     </tr>
 
 )
