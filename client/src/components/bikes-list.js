@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {Link, Route} from 'react-router-dom';
 import CreateBike from "./create-bike";
-const client = require('../client');
+const client = require('../../../client');
 
 const Bike = props => (
 

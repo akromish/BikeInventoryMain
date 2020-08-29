@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-const client = require('../client');
+const client = require('../../../client');
 
 class EditBike extends Component {
 
