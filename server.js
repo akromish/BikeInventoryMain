@@ -5,14 +5,13 @@ const bikeRoutes = require('./bikes.js');
 const mongoose = require('mongoose');
 
 const app = express();
-global.PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT || 4000;
 
 //allow db to receive input data
 app.use(cors());
 app.use(bodyParser.json());
 
 //connecting to atlas:
-// const uri = process.env.MONGODB_URI || 'mongodb+srv://admin:pass@cluster0.hhfak.mongodb.net/bikes?retryWrites=true&w=majority';
 const uri = 'mongodb+srv://admin:pass@cluster0.hhfak.mongodb.net/bikes?retryWrites=true&w=majority';
 mongoose.connect(uri,{ useNewUrlParser: true, useUnifiedTopology: true});
 
