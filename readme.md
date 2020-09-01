@@ -3,9 +3,10 @@
 To use:<br/>
    -navigate to where you want the app<br/>
    -"git clone -insert url- "<br/>
-   -"cd BikeMainInventory"<br/>
+   -"cd BikeInventoryMain"<br/>
    -"npm install"<br/>
-   -"cd client" then "npm install"<br/>
+   -"cd client"<br/>
+   -"npm install"<br/>
    -"cd ../"<br/>
    -"npm run dev"<br/><br/>
    
